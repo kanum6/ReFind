@@ -1,0 +1,237 @@
+/* Importação de fonte, embora seja melhor incluir no <head> do HTML */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); */
+
+:root {
+    --primary-color: #007bff; /* Azul para o ReFind e links */
+    --text-color: #444;
+    --background-color: #f8f8f8;
+    --logo-color: #004d99; /* Azul mais escuro para o logo */
+    --light-blue: #e8f3ff; /* Azul claro para a seção de fundo */
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/* HEADER                                   */
+/* -------------------------------------------------------------------------- */
+
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--logo-color); /* Usando uma cor mais escura para o 'ReFind' */
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0 5px;
+}
+
+.search-box input {
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 14px;
+    width: 150px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------- */
+/* SOBRE NÓS SECTION                           */
+/* -------------------------------------------------------------------------- */
+
+.about-section {
+    padding-top: 50px; /* Espaço para o título e a imagem de fundo */
+    background-color: var(--light-blue); /* Fundo azul claro na parte superior */
+    position: relative;
+    overflow: hidden; /* Para garantir que o mockup do celular não cause overflow */
+}
+
+/* Simulação da área azul escura no canto superior direito */
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%; /* Ajuste conforme a proporção na imagem */
+    height: 100%;
+    background-color: #fff; /* Fundo branco para a direita */
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima dos fundos */
+}
+
+/* Mockup da Imagem do Celular */
+.title-container {
+    position: relative;
+    height: 200px; /* Altura para acomodar a imagem do celular e o título */
+    margin-bottom: 20px;
+}
+
+.phone-bg-mock {
+    position: absolute;
+    top: -50px; /* Puxa para cima para simular a posição na imagem */
+    left: 0;
+    width: 600px; /* Largura da área do celular */
+    height: 350px; /* Altura da área do celular */
+    /* Usando um gradiente e borda para simular a imagem, o ideal seria usar uma imagem real */
+    background-color: #555;
+    background-image: linear-gradient(to top right, #333 10%, #666 90%);
+    border-radius: 10px;
+    transform: rotate(-15deg); /* Rotação para simular a perspectiva */
+    z-index: 1;
+    opacity: 0.8; /* Transparência para o fundo azul aparecer */
+    /* Adicionando mock de tela e ícones para maior semelhança */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.main-title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2; /* Fica acima do mockup do celular */
+    letter-spacing: 5px;
+}
+
+/* Linha de Conteúdo Principal */
+.content-row {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.text-column {
+    flex: 2; /* Ocupa mais espaço */
+    padding-right: 40px;
+    padding-top: 30px;
+}
+
+.main-text {
+    font-size: 18px;
+    color: #333;
+    max-width: 600px;
+}
+
+/* Mockup das Ilustrações (Itens e Caixa) */
+.illustration-mockup {
+    position: relative;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.item-mock {
+    position: absolute;
+    /* Simulação de Itens */
+    background-color: #555;
+    border-radius: 50%;
+    transform: rotate(10deg);
+}
+
+.item-1 { /* Simula o objeto preto */
+    width: 25px;
+    height: 80px;
+    border-radius: 5px;
+    top: 0;
+    left: 50px;
+    transform: rotate(60deg);
+}
+
+.item-2 { /* Simula o lápis */
+    width: 5px;
+    height: 100px;
+    background-color: #ffc107;
+    border-radius: 2px;
+    top: 50px;
+    left: 150px;
+    transform: rotate(-30deg);
+}
+
+.box-mock {
+    width: 150px;
+    height: 100px;
+    background-color: #f0c978;
+    border: 3px solid #b8860b;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+}
+
+
+/* Coluna da Imagem da Pessoa */
+.image-column {
+    flex: 1; /* Ocupa a outra parte do espaço */
+    /* Usando uma imagem de fundo simulada para a mulher */
+    background-image: url('https://i.imgur.com/GzBwYwB.png'); /* URL de exemplo */
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 500px; /* Altura ajustada */
+    width: 100%;
+    position: relative;
+    z-index: 2; /* Garante que fique acima da área branca de fundo */
+    /* Adicionando o efeito de "brilho" azul ao redor da imagem */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+    border-radius: 5px; /* Adicionado apenas para fins de visualização */
+}
