@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f0f2f5; 
+}
+
+header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #e0f2f7; 
+    padding: 10px 30px; 
+    border-bottom: 1px solid #cceeff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    height: 70px; 
+}
+
+
+.center-nav {
+    display: flex;
+    align-items: center;
+    gap: 70px; 
+    justify-content: center; 
+    margin: 0 auto; 
+}
+
+.center-nav a {
+    text-decoration: none; 
+    color: #333; 
+    font-weight: 500; 
+    font-size: 18px; 
+    transition: color 0.3s ease;
+}
+
+.right-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left img {
+    height: 25px; 
+    margin-right: 10px;
+}
+
+.right {
+    display: flex; 
+    align-items: center; 
+    gap: 25px; 
+}
+
+.right a {
+    text-decoration: none; 
+    color: #333;
+    font-weight: bold; 
+    font-size: 16px; 
+    transition: color 0.3s ease; 
+}
+
+.right a:hover {
+    color: #007bff; 
+}
+
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 8px 12px 8px 35px; 
+    border: 1px solid #ccc;
+    border-radius: 20px; 
+    font-size: 14px;
+    outline: none; 
+    width: 200px; 
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #999;
+}
+
+.search-container .search-icon {
+    position: absolute;
+    left: 12px; 
+    height: 18px; 
+    width: 18px;
+    color: #777;
+}
+
+.user-icon {
+    font-size: 28px;
+    color: #007bff; 
+    width: 40px; 
+    height: 40px; 
+    background-color: #ffffff; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #007bff; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-icon:hover {
+    background-color: #f0f8ff; 
+}
+
